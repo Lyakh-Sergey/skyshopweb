@@ -60,4 +60,8 @@ public class StorageService {
     private void addArticle(Article article) {
         articles.put(article.getId(), article);
     }
+
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(products.get(id));
+    }
 }
